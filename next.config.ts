@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      { hostname: "images.leadconnectorhq.com" },
+      { hostname: "www.google.com" },
+    ],
+  },
 };
 
 export default nextConfig;
