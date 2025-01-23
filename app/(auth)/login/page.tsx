@@ -1,4 +1,5 @@
 import { Rocket } from "lucide-react";
+import { Suspense } from "react";
 import LoginForm from "./_components/login-form";
 
 export default function Login() {
@@ -15,7 +16,9 @@ export default function Login() {
         </p>
       </div>
 
-      <LoginForm />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LoginForm />
+      </Suspense>
     </div>
   );
 }
